@@ -69,8 +69,8 @@ def prepare_training_data(img_root,json_root):
         img = Image.open(img_path)
         img_list = [(img, json_file)]
         # transforms = test_da if int(name.split('.')[0].split('_')[1])>3109 else train_da
-        # transforms = test_da
-        transforms = train_da
+        transforms = test_da
+        # transforms = train_da
         img_list = transforms(img_list)
         idx = 0
         for (img, target) in img_list:
