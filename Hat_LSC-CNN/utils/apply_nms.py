@@ -10,7 +10,7 @@ from crowd_hat.hat_utils import compression2d, compression1d, alignment_scheme, 
 import hat_config as cfg
 import torch
 
-if True:
+if False:
     from crowd_hat.count_decoder import CountDecoder
     from crowd_hat.nms_decoder import NMSDecoder
 

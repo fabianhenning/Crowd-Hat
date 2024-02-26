@@ -41,7 +41,8 @@ def prepare_training_data(img_root,json_root):
     save_root = cfg.training_data_root
     if not os.path.exists(save_root):
         os.mkdir(save_root)
-    checkpoint_path = '/home/ubuntu/lsc-cnn/models/train2/snapshots/scale_4_epoch_16.pth'
+    checkpoint_path = './weights/scale_4_epoch_41.pth'
+    # checkpoint_path = '/home/ubuntu/lsc-cnn/models/train2/snapshots/scale_4_epoch_16.pth'
     # checkpoint_path = '/home/ubuntu/lsc/weights/scale_4_epoch_46.pth'
     model = LSCCNN()
     checkpoint = torch.load(checkpoint_path)['state_dict']
@@ -75,7 +76,7 @@ def prepare_training_data(img_root,json_root):
         for (img, target) in img_list:
             cfg.global_dic = {}
             cfg.train_dic = {}
-            save_name = target['id'] + '_' + str(idx)
+            save_name = target['img_id'] + '_' + str(idx)
             cfg.global_dic['name'] = save_name
             gt_count = target['human_num']
             cfg.global_dic['count'] = gt_count

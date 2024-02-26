@@ -21,9 +21,11 @@ alpha_bc = 1
 
 result_root = './results'
 point_root = r'/home/ubuntu/dataset/nwpu/Points'
-json_root = r'/home/ubuntu/dataset/nwpu/jsons'
+# json_root = r'/home/ubuntu/dataset/nwpu/jsons'
+json_root = '../crowd_data/NWPU-Crowd/jsons'
 # temp_root = r"/root/autodl-tmp/dataset/temp"
-img_root = r'/home/ubuntu/dataset/nwpu/images'
+# img_root = r'/home/ubuntu/dataset/nwpu/images'
+img_root = '../crowd_data/NWPU-Crowd/images_part2'
 nwpu_test = r'/home/ubuntu/dataset/test'
 # json_root = r'/root/autodl-tmp/part_B_final/test_data/gt_count'
 training_data_root = './training_data'
